@@ -99,28 +99,28 @@ int getTotalX(int a_count, int* a, int b_count, int* b) {
     long long int lcm = getLCM(a_count, a);
     long long int gcd = getGCD(b_count, b);
     
-    if(lcm == 0){
-        return 0;
-    }
-    else{
-        if(lcm > gcd){
-            return 0;
-        }
-        else if( gcd % lcm != 0){
-            return 0;
-        }
-        else{
-            int counter = 0;
-            long long int tmp = lcm;
-            while(lcm <= gcd){
-                if(gcd % lcm == 0){
-                    counter++;
-                }
-                lcm += tmp;
-            }
-            return counter;
-        }
-    }
+	if(lcm == 0){
+	    return 0;
+	}
+	else{
+	    if(lcm > gcd){
+	        return 0;
+	    }
+	    else if( gcd % lcm != 0){
+	        return 0;
+	    }
+	    else{
+	        int counter = 0;
+	        long long int tmp = lcm;
+	        while(lcm <= gcd){
+	            if(gcd % lcm == 0){
+	                counter++;
+	            }
+	            lcm += tmp;
+	        }
+	        return counter;
+	    }
+	}
     
 }
 
